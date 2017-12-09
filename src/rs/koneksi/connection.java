@@ -1,0 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rs.koneksi;
+
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.management.Query;
+
+public class connection {
+    private Connection con;
+    private ResultSet rs;
+    private PreparedStatement ps;
+    
+}

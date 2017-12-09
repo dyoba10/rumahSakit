@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4b2d5489-a5b1-49d5-b844-fb28b3cfa95b">
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     dokter.`Kode_Dokter` AS dokter_Kode_Dokter,
+     dokter.`Nama_Dokter` AS dokter_Nama_Dokter,
+     dokter.`Tgl_lahir` AS dokter_Tgl_lahir,
+     dokter.`Jk` AS dokter_Jk,
+     dokter.`Alamat` AS dokter_Alamat,
+     dokter.`Spesialis` AS dokter_Spesialis,
+     dokter.`Status` AS dokter_Status,
+     dokter.`No_izinK` AS dokter_No_izinK
+FROM
+     `dokter` dokter]]>
+	</queryString>
+	<field name="dokter_Kode_Dokter" class="java.lang.String"/>
+	<field name="dokter_Nama_Dokter" class="java.lang.String"/>
+	<field name="dokter_Jk" class="java.lang.String"/>
+	<field name="dokter_Tgl_lahir" class="java.sql.Date"/>
+	<field name="dokter_Alamat" class="java.lang.String"/>
+	<field name="dokter_Spesialis" class="java.lang.String"/>
+	<field name="dokter_Status" class="java.lang.String"/>
+	<field name="dokter_No_izinK" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="6c937656-9703-4337-809f-644cd6c12214"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="2eaa4e32-a953-4e0e-9b96-b2a95cdd6b22"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Red Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="446e2867-0ef1-4708-b4ab-69fd90218e40"/>
+				<text><![CDATA[Leaf Red SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="8d57f84d-b441-4d01-a94b-1bdafecefae1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="69" height="15" uuid="6bacc4c6-ec9e-48b7-a45f-1e0c385d738d"/>
+				<text><![CDATA[dokter_Kode_Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="69" y="19" width="69" height="15" uuid="06b965d7-eea6-49bd-ad14-bc2a24e0bd0b"/>
+				<text><![CDATA[dokter_Nama_Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="69" height="15" uuid="2d406cd0-073c-4ffc-bb2c-bb8e654c1b7b"/>
+				<text><![CDATA[dokter_Jk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="207" y="19" width="69" height="15" uuid="7ad7f228-4dc2-409a-a9fe-6da676c48034"/>
+				<text><![CDATA[dokter_Tgl_lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="69" height="15" uuid="487e36a7-b2a2-4233-93d9-78b9f3b2f176"/>
+				<text><![CDATA[dokter_Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="345" y="19" width="69" height="15" uuid="4128aae7-4d61-46ee-b319-2a06a9623ac3"/>
+				<text><![CDATA[dokter_Spesialis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="69" height="15" uuid="6f67e07f-7858-4071-a1b6-a2ece596c4ef"/>
+				<text><![CDATA[dokter_Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="483" y="19" width="69" height="15" uuid="a0898c16-0eae-49a3-ac69-30b5bf202918"/>
+				<text><![CDATA[dokter_No_izinK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="76e41b83-8871-42be-b0d4-e057f0200c13"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="69" height="15" uuid="3759f194-3ae7-48ca-848f-45df69a3a2de"/>
+				<textFieldExpression><![CDATA[$F{dokter_Kode_Dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="69" y="0" width="69" height="15" uuid="391018eb-f979-44fa-b4f0-fa8d6c9921be"/>
+				<textFieldExpression><![CDATA[$F{dokter_Nama_Dokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="69" height="15" uuid="90ab1528-561d-4065-9941-d5cb8a98ee69"/>
+				<textFieldExpression><![CDATA[$F{dokter_Jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="207" y="0" width="69" height="15" uuid="c97f703d-dcea-408c-ac7a-5012277f8d51"/>
+				<textFieldExpression><![CDATA[$F{dokter_Tgl_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="69" height="15" uuid="1eab298e-7ecf-4299-9490-1be4900c57cc"/>
+				<textFieldExpression><![CDATA[$F{dokter_Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="345" y="0" width="69" height="15" uuid="18f57454-2b86-43ce-a66a-59085226e33a"/>
+				<textFieldExpression><![CDATA[$F{dokter_Spesialis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="69" height="15" uuid="972cc549-ae7a-4029-83dd-263a46f6a70a"/>
+				<textFieldExpression><![CDATA[$F{dokter_Status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="483" y="0" width="69" height="15" uuid="60dca8df-c62a-4fd2-8498-2bcea42dfffd"/>
+				<textFieldExpression><![CDATA[$F{dokter_No_izinK}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="b89953d4-2fe5-42b3-a51f-056c8eb6b541"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="528b7950-2a69-49a7-9c13-c38d699f623c"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="4226cada-2a3f-41d1-8d31-d1482257e3cc"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="a4f5c087-8d5e-46b6-88c4-781089bd3a11"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

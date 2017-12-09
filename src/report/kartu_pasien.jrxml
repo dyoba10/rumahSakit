@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="566" pageHeight="396" orientation="Landscape" columnWidth="526" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8e69f198-ed15-43d7-9ea4-37b82e43d0ba">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pas" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select* from pasien where Kode_pas = $P{pas}]]>
+	</queryString>
+	<field name="Kode_pas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="No_KTP" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Pasien" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ttl" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Golongan_Darah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pekerjaan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bagian_Perawatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="267" height="20" uuid="4c7725f7-3efd-4385-bc6d-02a658a62b03"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KARTU PENDAFTARAN PERAWATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="085acf77-1be5-4f3f-9cc1-5395fd15a06f"/>
+				<textElement>
+					<font fontName="Tw Cen MT" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rumah Sakit Medica]]></text>
+			</staticText>
+			<image>
+				<reportElement x="456" y="-18" width="70" height="70" uuid="ab6b17d8-6086-4dac-89ff-20e30142f48e"/>
+				<imageExpression><![CDATA["F:\\KULI-AH\\Akademik\\Pekuliahan\\semester 4\\Project\\RS\\src\\gambar\\lmedic.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="200" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="46" width="100" height="20" uuid="a6382682-9651-4692-b3b9-b5800234d79d"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="100" height="20" uuid="46f09e48-d81e-46c2-8e29-cfbbf65e2eec"/>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="100" height="20" uuid="07a299c2-0e06-4817-a855-ee331d013674"/>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="145" width="100" height="20" uuid="2b6eb63f-ec79-434c-bff8-d00dc25acccd"/>
+				<text><![CDATA[Golongan Darah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="107" width="100" height="20" uuid="a2224599-f1ee-4379-a4f2-b0b854b0dce3"/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="180" width="100" height="20" uuid="d160556f-dcd3-4920-8ca3-4f1f1730283a"/>
+				<text><![CDATA[Perawatan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="167" y="76" width="43" height="20" uuid="563b694d-01e1-47fd-919d-18b3b4294b61"/>
+				<textFieldExpression><![CDATA[$F{Ttl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="14" width="100" height="20" uuid="78145dad-f1e0-45b9-b087-37ec1dbb58b7"/>
+				<textFieldExpression><![CDATA[$F{Kode_pas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="46" width="100" height="20" uuid="39fa89a1-9919-482d-80a2-a2c529a2139c"/>
+				<textFieldExpression><![CDATA[$F{Nama_Pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="180" width="100" height="20" uuid="c7618723-178a-45d7-b01b-23241c286f84"/>
+				<textFieldExpression><![CDATA[$F{Bagian_Perawatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="107" width="100" height="20" uuid="e9a2fc76-e0ce-463d-8db4-6b08c9da706a"/>
+				<textFieldExpression><![CDATA[$F{Jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="145" width="100" height="20" uuid="a7f43b7e-1164-4b5c-a901-d6deefd476fa"/>
+				<textFieldExpression><![CDATA[$F{Golongan_Darah}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="37" width="339" height="20" uuid="ac88ee5e-fd81-4c75-befa-4a4841f01a56"/>
+				<text><![CDATA[*Kartu ini ditukarkan kepada petugas untuk mendapat nomer antrian]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

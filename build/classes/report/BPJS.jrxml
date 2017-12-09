@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2418ccfa-3cd5-45bf-8532-fd9872cf2207">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parabpjs" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `peserta_bpjs` peserta_bpjs
+WHERE
+     No_Regis = $P{parabpjs}]]>
+	</queryString>
+	<field name="No_Regis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nik" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_peserta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tempat_L" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tgl_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status_per" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="No_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pekerjaan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="npwp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kelas_P" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="16" width="100" height="20" uuid="cb80ce10-45f3-47b6-974b-ffcaaa900f81"/>
+				<text><![CDATA[peserta_bpjs_No_Regis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="16" width="100" height="20" uuid="5847066e-93db-4c7c-b1d1-158b82240944"/>
+				<text><![CDATA[peserta_bpjs_Nik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="16" width="100" height="20" uuid="fb48bc11-9baa-43c6-a428-a0e2532d38c8"/>
+				<text><![CDATA[peserta_bpjs_Nama_peserta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="16" width="100" height="20" uuid="8ea2231d-82b2-43bf-bf05-8fb4fb6235d0"/>
+				<text><![CDATA[peserta_bpjs_Tgl_lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="16" width="100" height="20" uuid="86dbc630-435b-46b7-b576-0ee75f0f2dd5"/>
+				<text><![CDATA[peserta_bpjs_Kelas_P]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="49" width="100" height="20" uuid="ace9e818-b159-4c83-972d-092d22b756ab"/>
+				<textFieldExpression><![CDATA[$F{No_Regis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="56" width="100" height="20" uuid="34e2985a-71bc-41c8-a570-c8d618e9f291"/>
+				<textFieldExpression><![CDATA[$F{Nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="62" width="100" height="20" uuid="a4add57e-9a42-4555-99e1-d1a851af6f28"/>
+				<textFieldExpression><![CDATA[$F{Nama_peserta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="75" width="100" height="20" uuid="8a6768da-ebca-42b1-804f-845d2cfb41a4"/>
+				<textFieldExpression><![CDATA[$F{Tgl_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="88" width="100" height="20" uuid="f7f01248-e1d5-481c-a767-985687498308"/>
+				<textFieldExpression><![CDATA[$F{Kelas_P}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

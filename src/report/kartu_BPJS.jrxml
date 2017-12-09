@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="566" pageHeight="396" orientation="Landscape" columnWidth="526" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cbdf987-0c83-40db-8580-df2573d54c49">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pasbp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT* FROM peserta_bpjs WHERE No_Regis = $P{pasbp}]]>
+	</queryString>
+	<field name="No_Regis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nik" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_peserta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tempat_L" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tgl_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status_per" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="No_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pekerjaan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="npwp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kelas_P" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="59" width="252" height="20" forecolor="#FFFFFF" backcolor="#009966" uuid="fbf12418-10ca-4f24-8938-550d5a1e37b9"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KARTU IDENTITAS PESERTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="252" y="59" width="274" height="20" backcolor="#3300CC" uuid="7017f7c4-86d2-4a05-8333-316e1af1b078"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<image>
+				<reportElement x="52" y="0" width="200" height="45" uuid="75cecfc5-ba09-48c6-b8e9-ebbde8d82259"/>
+				<imageExpression><![CDATA["F:\\KULI-AH\\Akademik\\Pekuliahan\\semester 4\\Project\\I\\imagebpjs2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="252" y="-16" width="100" height="75" uuid="66cf8af4-46dd-434b-b386-13d7c706f5fa"/>
+				<imageExpression><![CDATA["F:\\KULI-AH\\Akademik\\Pekuliahan\\semester 4\\Project\\I\\logojk1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="456" y="-11" width="70" height="70" uuid="f118a4a0-dfc6-4bfd-bd10-20de5bda5957"/>
+				<imageExpression><![CDATA["F:\\KULI-AH\\Akademik\\Pekuliahan\\semester 4\\Project\\I\\119040-medical-elements\\119040-medical-elements\\png\\lmedic.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="199" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="18" width="100" height="20" uuid="2c23fbb3-d8d1-469d-bb96-f0ed8a42a1cd"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12"/>
+				</textElement>
+				<text><![CDATA[No. Regis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="78" width="100" height="20" uuid="fb00444f-7061-4803-8c27-bcd6ac40469e"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12"/>
+				</textElement>
+				<text><![CDATA[Nik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="48" width="100" height="20" uuid="a62bcfcd-4c35-48a5-b6c2-1cda9cbbaa84"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="108" width="100" height="20" uuid="008a29d7-c087-4fae-acf7-02725c6d8dd3"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="138" width="100" height="20" uuid="5d0ddade-225d-48bd-9d41-755ecb2e6528"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12"/>
+				</textElement>
+				<text><![CDATA[Kelas Perawatan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="177" y="18" width="100" height="20" uuid="8932ddb9-6a81-4268-9d55-c0001669b1b2"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{No_Regis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="138" width="100" height="20" uuid="5ff87a5d-b95b-4ec5-9e27-dcb61ba58101"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kelas_P}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="78" width="100" height="20" uuid="f14ccebd-8041-458a-8cbc-8104a1487030"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="48" width="100" height="20" uuid="04fdd9cd-0549-486f-8304-19a21b3ebf82"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nama_peserta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="108" width="36" height="20" uuid="6e9193ba-23f8-4417-839b-fb82c5ba25e9"/>
+				<textElement>
+					<font fontName="Tw Cen MT" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tgl_lahir}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="179" width="252" height="20" backcolor="#009966" uuid="f7b3091f-61ba-4c70-8570-b3430639f873"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="252" y="179" width="274" height="20" backcolor="#3300CC" uuid="d8faa165-6c6d-4143-afaf-41f5065bca47"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="86" splitType="Stretch"/>
+	</detail>
+</jasperReport>

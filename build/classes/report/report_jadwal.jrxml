@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="28fab678-2d18-4484-9bbb-629925d18352">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     jadwal.`Kode_jadwal` AS jadwal_Kode_jadwal,
+     jadwal.`Kode_ruangan` AS jadwal_Kode_ruangan,
+     jadwal.`Nama_klinik` AS jadwal_Nama_klinik,
+     jadwal.`Hari` AS jadwal_Hari,
+     jadwal.`Waktu` AS jadwal_Waktu,
+     jadwal.`Kdokter` AS jadwal_Kdokter,
+     jadwal.`Ndokter` AS jadwal_Ndokter
+FROM
+     `jadwal` jadwal]]>
+	</queryString>
+	<field name="jadwal_Kode_jadwal" class="java.lang.String"/>
+	<field name="jadwal_Kode_ruangan" class="java.lang.String"/>
+	<field name="jadwal_Nama_klinik" class="java.lang.String"/>
+	<field name="jadwal_Kdokter" class="java.lang.String"/>
+	<field name="jadwal_Ndokter" class="java.lang.String"/>
+	<field name="jadwal_Hari" class="java.lang.String"/>
+	<field name="jadwal_Waktu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="502" y="0" width="300" height="64" uuid="9451d42d-82fd-43a1-a794-34a8817973d5"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="d3dc6599-c71a-488d-a27b-984f0ed79197"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tw Cen MT"/>
+				</textElement>
+				<text><![CDATA[Rumah Sakit Medica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="91" y="46" width="183" height="22" uuid="39a82b5c-cff0-46a1-9581-4896e4610e05"/>
+				<text><![CDATA[Jadwal Praktek Dokter]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="802" height="1" uuid="73afe4f5-0423-4e0c-8700-11846caaf963"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="44" height="15" uuid="4892ffef-c991-4cac-9254-042eda15497a"/>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="44" y="19" width="58" height="15" uuid="22bdc685-2c94-43ae-8b60-9c7c1faf61f9"/>
+				<text><![CDATA[Ruangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="118" y="19" width="79" height="15" uuid="496b07f5-80ae-4791-bc51-7d414c35d658"/>
+				<text><![CDATA[Klinik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="251" y="19" width="79" height="15" uuid="b2fc3f5f-196b-4778-baa4-75f69eaef4e2"/>
+				<text><![CDATA[Kode Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="347" y="19" width="51" height="15" uuid="04c49277-b865-49e5-a5a3-0891c61d6bf9"/>
+				<text><![CDATA[Dokter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="501" y="19" width="79" height="15" uuid="20e930e9-bd39-4d2d-bae7-74c6278b1840"/>
+				<text><![CDATA[Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="647" y="19" width="79" height="15" uuid="e3992a43-29d6-4e9b-b3a0-7d3c83d4b3ff"/>
+				<text><![CDATA[Waktu]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="dfe74194-ced0-47e0-bd6f-a20bae77325c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="44" height="15" uuid="9755f080-e1a3-4f35-9738-36b08db559f1"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Kode_jadwal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="118" y="0" width="112" height="15" uuid="fb79ee9a-ad32-4105-88ad-4455dbfdb63c"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Nama_klinik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="251" y="0" width="79" height="15" uuid="d7e98821-62a6-4d80-89d9-e5c81324d105"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Kdokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="347" y="0" width="151" height="15" uuid="0082b4f7-db11-4d2e-9913-fa07f6171043"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Ndokter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="501" y="0" width="142" height="15" uuid="ed21d9d0-6d8f-43e3-85e7-3beb00e55d42"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Hari}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="647" y="0" width="79" height="15" uuid="9053edf4-3da7-46a2-aab6-575a4b9c936c"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Waktu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="44" y="0" width="58" height="15" uuid="15789b99-0bb0-4aa1-a67d-b2549306b0c8"/>
+				<textFieldExpression><![CDATA[$F{jadwal_Kode_ruangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="8f0c3b25-f2c0-4f48-9932-6c659aa9192d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="d9d12be6-6330-4511-82d2-aab5855dc8fb"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="6bcd1892-1fdf-4cdf-99df-58eea9fed22e"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="c592b5d6-5a10-4c9f-a5ea-35bcdac59263"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
